@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cstdio>
 #include<string>
-char num[11][3] = { "Áã","Ò»","¶ş","Èı","ËÄ","Îå","Áù","Æß","°Ë","¾Å","Ê®" };
+char num[11][3] = { "é›¶","ä¸€","äºŒ","ä¸‰","å››","äº”","å…­","ä¸ƒ","å…«","ä¹","å" };
 int integer = 0;
 
 int convert1(char wen[])
@@ -49,21 +49,21 @@ void opera(char x[])
 	char m[20], n[20], s[20];
 	while (1) {
 		cin >> m;
-		if (strcmp(m, "¿´¿´") == 0) break;
+		if (strcmp(m, "çœ‹çœ‹") == 0) break;
 		if (strcmp(m, x) != 0) {
-			cout << "ÊäÈë´íÎó" << endl; break;
+			cout << "è¾“å…¥é”™è¯¯" << endl; break;
 		}
 		cin >> n >> s;
-		if (strcmp(n, "Ôö¼Ó") == 0)
+		if (strcmp(n, "å¢åŠ ") == 0)
 			integer = integer + convert0(s);
-		else if (strcmp(n, "¼õÉÙ") == 0)
+		else if (strcmp(n, "å‡å°‘") == 0)
 			integer = integer - convert0(s);
-		else if (strcmp(n, "³ËÒÔ") == 0)
+		else if (strcmp(n, "ä¹˜ä»¥") == 0)
 			integer = integer * convert0(s);
-		else if (strcmp(n, "³ıÒÔ") == 0)
+		else if (strcmp(n, "é™¤ä»¥") == 0)
 			integer = integer / convert0(s);
 		else {
-			cout << "ÊäÈë´íÎó" << endl; break;
+			cout << "è¾“å…¥é”™è¯¯" << endl; break;
 		}
 	}
 }
@@ -73,20 +73,20 @@ int main(void)
 	using namespace std;
 	char a[20], x[20], b[20], y[20], h[20];
 	cin >> a >> x >> b >> y;
-	if (strcmp(a, "ÕûÊı") != 0 || strcmp(b, "µÈÓÚ") != 0)
-		cout << "ÊäÈë´íÎó" << endl;
+	if (strcmp(a, "æ•´æ•°") != 0 || strcmp(b, "ç­‰äº") != 0)
+		cout << "è¾“å…¥é”™è¯¯" << endl;
 	integer = convert0(y);
 	opera(x);
 	cin >> h;
 	if (integer > 99 || integer < 0)
-		cout << "³¬³ö·¶Î§";
+		cout << "è¶…å‡ºèŒƒå›´";
 	else if (integer >= 0 && integer < 11)
 		cout << num[integer];
 	else if (integer > 11 && integer < 20)
-		cout << "Ê®" << num[integer % 10];
+		cout << "å" << num[integer % 10];
 	else if (integer > 19 && integer % 10 == 0)
-		cout << num[integer / 10] << "Ê®";
+		cout << num[integer / 10] << "å";
 	else if (integer > 19 && integer % 10 != 0)
-		cout << num[integer / 10] << "Ê®" << num[integer % 10];
+		cout << num[integer / 10] << "å" << num[integer % 10];
 	return 0;
 }
